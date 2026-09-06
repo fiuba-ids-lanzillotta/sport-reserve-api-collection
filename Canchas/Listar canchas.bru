@@ -1,0 +1,24 @@
+meta {
+  name: Listar canchas
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}{{base_url}}/canchas
+  body: none
+  auth: none
+}
+
+params:query {
+  _offset: 0
+  _limit: 10
+  ~id_deporte:
+  ~nombre:
+  ~techada:
+  ~activa:
+}
+
+docs {
+  Lista las canchas con filtros opcionales y paginación HATEOAS.
+}

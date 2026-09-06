@@ -1,0 +1,25 @@
+meta {
+  name: Cambiar estado reserva
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{protocol}}://{{host}}{{base_url}}/reservas/1/estado
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "estado": "cancelada"
+  }
+}
+
+docs {
+  Cambia el estado de una reserva respetando las transiciones permitidas.
+}

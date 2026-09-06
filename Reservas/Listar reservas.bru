@@ -1,0 +1,25 @@
+meta {
+  name: Listar reservas
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}{{base_url}}/reservas
+  body: none
+  auth: none
+}
+
+params:query {
+  _offset: 0
+  _limit: 10
+  ~id_cancha:
+  ~id_socio:
+  ~estado:
+  ~fecha_desde:
+  ~fecha_hasta:
+}
+
+docs {
+  Lista las reservas con filtros opcionales y paginación HATEOAS.
+}

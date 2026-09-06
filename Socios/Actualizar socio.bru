@@ -1,0 +1,26 @@
+meta {
+  name: Actualizar socio
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{protocol}}://{{host}}{{base_url}}/socios/1
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "juan.perez.nuevo@example.com",
+    "activo": true
+  }
+}
+
+docs {
+  Actualiza parcialmente los campos de un socio.
+}

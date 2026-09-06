@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Sport Reserve API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

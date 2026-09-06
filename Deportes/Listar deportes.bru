@@ -1,0 +1,15 @@
+meta {
+  name: Listar deportes
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}{{base_url}}/deportes
+  body: none
+  auth: none
+}
+
+docs {
+  Devuelve la lista de deportes precargados del club.
+}

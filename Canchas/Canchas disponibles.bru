@@ -1,0 +1,25 @@
+meta {
+  name: Canchas disponibles
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{protocol}}://{{host}}{{base_url}}/canchas/disponibles
+  body: none
+  auth: none
+}
+
+params:query {
+  fecha: 2026-10-15
+  hora_inicio: 18:00:00
+  hora_fin: 20:00:00
+  _offset: 0
+  _limit: 10
+  ~id_deporte:
+  ~techada:
+}
+
+docs {
+  Consulta las canchas disponibles en el intervalo solicitado.
+}

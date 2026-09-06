@@ -1,0 +1,28 @@
+meta {
+  name: Crear reserva
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{protocol}}://{{host}}{{base_url}}/reservas
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "id_socio": 1,
+    "id_cancha": 1,
+    "fecha_hora_inicio": "2026-10-15T18:00:00.000000-03:00",
+    "fecha_hora_fin": "2026-10-15T20:00:00.000000-03:00"
+  }
+}
+
+docs {
+  Crea una reserva para un socio y una cancha en el horario indicado.
+}

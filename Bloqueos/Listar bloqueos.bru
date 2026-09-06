@@ -1,0 +1,22 @@
+meta {
+  name: Listar bloqueos
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{host}}{{base_url}}/bloqueos
+  body: none
+  auth: none
+}
+
+params:query {
+  _offset: 0
+  _limit: 10
+  ~id_cancha:
+  ~fecha:
+}
+
+docs {
+  Lista los bloqueos de mantenimiento con filtros opcionales y paginación.
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Actualizar cancha
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{protocol}}://{{host}}{{base_url}}/canchas/1
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "precio_hora": 1100000,
+    "activa": true
+  }
+}
+
+docs {
+  Actualiza parcialmente los campos de una cancha.
+}

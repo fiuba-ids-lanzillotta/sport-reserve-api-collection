@@ -1,0 +1,26 @@
+meta {
+  name: Crear socio
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{protocol}}://{{host}}{{base_url}}/socios
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Laura Martínez",
+    "email": "laura.martinez@example.com"
+  }
+}
+
+docs {
+  Crea un nuevo socio del club.
+}

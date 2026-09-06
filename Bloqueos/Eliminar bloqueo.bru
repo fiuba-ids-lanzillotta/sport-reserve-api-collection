@@ -1,0 +1,15 @@
+meta {
+  name: Eliminar bloqueo
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{protocol}}://{{host}}{{base_url}}/bloqueos/1
+  body: none
+  auth: none
+}
+
+docs {
+  Elimina un bloqueo de mantenimiento por su ID.
+}
